@@ -8,10 +8,10 @@ Emblor is built on top of the [Input](https://ui.shadcn.com/docs/components/inpu
 
 ## Installation
 
-To install Emblor, run the command:
+To add Emblor, run the command:
 
 ```bash
-pnpm add emblor
+pnpm dlx shadcn@latest add https://fayevr.dev/registry/emblor.json
 ```
 
 ## Features
