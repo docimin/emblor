@@ -1,6 +1,6 @@
 https://github.com/JaleelB/emblor/assets/78449846/7f678789-ef5e-4913-b26c-9317003d6dbc
 
-[Emblor](https://emblor.jaleelbennett.com/) is a highly customizable, accessible, and fully-featured tag input component built with Shadcn UI.
+Emblor is a highly customizable, accessible, and fully-featured tag input component built with Shadcn UI.
 
 ## About
 

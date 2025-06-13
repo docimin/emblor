@@ -1,15 +1,15 @@
 'use client';
 
 import React, { useMemo } from 'react';
-import { Input } from '../ui/input';
-import { Button } from '../ui/button';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { type VariantProps } from 'class-variance-authority';
 // import { CommandInput } from '../ui/command';
-import { TagPopover } from './tag-popover';
-import { TagList } from './tag-list';
-import { tagVariants } from './tag';
-import { Autocomplete } from './autocomplete';
-import { cn, uuid } from '../utils';
+import { TagPopover } from '@/registry/default/components/tag-popover';
+import { TagList } from '@/registry/default/components/tag-list';
+import { tagVariants } from '@/registry/default/components/tag';
+import { Autocomplete } from '@/registry/default/components/tag-autocomplete';
+import { cn, uuid } from '@/registry/default/lib/utils';
 
 export enum Delimiter {
   Comma = ',',

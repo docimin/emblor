@@ -4,11 +4,11 @@ import * as React from 'react';
 import { type DialogProps } from '@radix-ui/react-dialog';
 import { Command as CommandPrimitive } from 'cmdk';
 
-import { Dialog, DialogContent } from '../ui/dialog';
-import { cn } from '../utils';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { cn } from '@/registry/default/lib/utils';
 
 const Command = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive>,
+  React.ComponentRef<typeof CommandPrimitive>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive
@@ -40,7 +40,7 @@ interface CommandInputProps extends React.ComponentPropsWithoutRef<typeof Comman
   inlineTags?: boolean;
 }
 
-const CommandInput = React.forwardRef<React.ElementRef<typeof CommandPrimitive.Input>, CommandInputProps>(
+const CommandInput = React.forwardRef<React.ComponentRef<typeof CommandPrimitive.Input>, CommandInputProps>(
   ({ className, inlineTags, ...props }, ref) => (
     <div className={`flex items-center ${inlineTags ? 'px-0.5' : 'px-3'}`} cmdk-input-wrapper="">
       <svg
@@ -73,7 +73,7 @@ const CommandInput = React.forwardRef<React.ElementRef<typeof CommandPrimitive.I
 CommandInput.displayName = CommandPrimitive.Input.displayName;
 
 const CommandList = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive.List>,
+  React.ComponentRef<typeof CommandPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.List>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
@@ -86,14 +86,14 @@ const CommandList = React.forwardRef<
 CommandList.displayName = CommandPrimitive.List.displayName;
 
 const CommandEmpty = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive.Empty>,
+  React.ComponentRef<typeof CommandPrimitive.Empty>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty>
 >((props, ref) => <CommandPrimitive.Empty ref={ref} className="py-6 text-center text-sm" {...props} />);
 
 CommandEmpty.displayName = CommandPrimitive.Empty.displayName;
 
 const CommandGroup = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive.Group>,
+  React.ComponentRef<typeof CommandPrimitive.Group>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Group
@@ -112,7 +112,7 @@ const CommandGroup = React.forwardRef<
 CommandGroup.displayName = CommandPrimitive.Group.displayName;
 
 const CommandSeparator = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive.Separator>,
+  React.ComponentRef<typeof CommandPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator ref={ref} className={cn('-mx-1 h-px bg-border', className)} {...props} />
@@ -120,7 +120,7 @@ const CommandSeparator = React.forwardRef<
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
 
 const CommandItem = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive.Item>,
+  React.ComponentRef<typeof CommandPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Item

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "emblor",
+  "homepage": "https://fayevr.dev",
+  "items": [
+    {
+      "name": "tag",
+      "type": "registry:component",
+      "title": "Tag Components",
+      "description": "A collection of tag-related components including Tag, TagInput, TagList, TagPopover, and Autocomplete.",
+      "dependencies": ["tailwindcss@^4"],
+      "registryDependencies": ["button", "input", "popover"],
+      "files": [
+        {
+          "path": "registry/default/components/tag.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/tag-input.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/tag-list.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/tag-popover.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/components/tag-autocomplete.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

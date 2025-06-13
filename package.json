@@ -1,49 +1,77 @@
 {
-  "name": "workspace-root",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prettier-check": "prettier --check \"**/*.{ts,tsx,md}\"",
-    "release": "pnpm run build && changeset publish",
-    "local-release": "changeset version && changeset publish",
-    "prepublishOnly": "npm run ci",
-    "copy-readme": "cp README.md packages/*",
-    "prepare": "husky"
+  "author": "Faye <faye@fayevr.dev>",
+  "bugs": {
+    "url": "https://github.com/docimi/emblor/issues"
   },
+  "dependencies": {
+    "@radix-ui/react-dialog": "1.1.14",
+    "@radix-ui/react-popover": "^1.1.14",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "cmdk": "^1.1.1",
+    "react-easy-sort": "^1.6.0",
+    "shadcn": "2.6.0-canary.3",
+    "tailwind-merge": "latest"
+  },
+  "description": "A full featured, unstyled tag input component for React",
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
     "@types/node": "^24",
-    "husky": "^9.1.7",
+    "@types/react": "^19",
+    "eslint": "^9.28.0",
     "lint-staged": "^15.2.9",
     "prettier": "^3.5.3",
-    "tsc-files": "^1.1.4",
-    "turbo": "latest",
+    "react": "^19.1.0",
     "typescript": "5.8.3",
-    "zod": "^3.25.64",
-    "eslint": "^9.28.0"
+    "zod": "^3.25.64"
   },
+  "engines": {
+    "node": ">=18 <24"
+  },
+  "keywords": [
+    "shadcn",
+    "react",
+    "tag input",
+    "shadcn/ui",
+    "tag input component",
+    "shadcn tag input component",
+    "input",
+    "radix ui",
+    "react tag input",
+    "tag input component",
+    "emblor",
+    "emblor tag input component"
+  ],
+  "license": "MIT",
   "lint-staged": {
+    "*.{js,jsx,json}": [
+      "prettier --write"
+    ],
     "*.{ts,tsx,md,mdx}": [
       "prettier --write",
       "tsc-files --noEmit"
-    ],
-    "*.{js,jsx,json}": [
-      "prettier --write"
     ]
+  },
+  "name": "emblor",
+  "packageManager": "pnpm@10.10.0",
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "private": false,
+  "repository": {
+    "directory": "packages/emblor",
+    "type": "git",
+    "url": "https://github.com/docimin/emblor"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "local-release": "changeset version && changeset publish",
+    "prettier-check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "registry:build": "shadcn build"
   },
   "trustedDependencies": [
     "npm-run-all"
   ],
-  "packageManager": "pnpm@10.10.0",
-  "engines": {
-    "node": ">=18 <24"
-  },
-  "dependencies": {
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^5.0.5"
-  }
+  "version": "1.5.0"
 }
