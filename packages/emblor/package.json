@@ -1,33 +1,34 @@
 {
-  "name": "emblor",
-  "version": "1.4.8",
+  "author": "Faye <faye@fayevr.dev>",
+  "bugs": {
+    "url": "https://github.com/docimi/emblor/issues"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "1.1.14",
+    "@radix-ui/react-popover": "^1.1.14",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "cmdk": "^1.1.1",
+    "react-easy-sort": "^1.6.0",
+    "tailwind-merge": "latest"
+  },
   "description": "A full featured, unstyled tag input component for React",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "react": "^19.1.0",
+    "tsup": "^8.5.0"
   },
   "exports": {
-    "types": "./dist/index.d.ts",
     "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "scripts": {
-    "prepare": "pnpm turbo build --filter emblor",
-    "typecheck": "tsc --noEmit",
-    "build": "run-p build:*",
-    "build:tsup": "tsup --dts --minify",
-    "clean": "rimraf dist",
-    "dev": "tsup --watch --dts",
-    "format": "prettier --write .",
-    "prettier-check": "prettier --check \"**/*.{ts,tsx,md}\"",
-    "release": "pnpm run build && changeset publish"
-  },
+  "homepage": "https://fayevr.dev",
   "keywords": [
     "shadcn",
     "react",
@@ -42,37 +43,35 @@
     "emblor",
     "emblor tag input component"
   ],
-  "author": "Jaleel Bennett <jaleelcodes@gmail.com>",
   "license": "MIT",
-  "homepage": "https://emblor.jaleelbennett.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JaleelB/emblor",
-    "directory": "packages/emblor"
-  },
-  "bugs": {
-    "url": "https://github.com/JaleelB/emblor/issues"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.13",
-    "@types/react": "^18.0.26",
-    "react": "^18.2.0",
-    "tsup": "^6.5.0",
-    "typescript": "^4.8.4"
-  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "name": "emblor",
+  "packageManager": "pnpm@10.10.0",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
-  "packageManager": "pnpm@9.0.2",
-  "dependencies": {
-    "@radix-ui/react-dialog": "1.0.4",
-    "@radix-ui/react-popover": "^1.0.7",
-    "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "latest",
-    "clsx": "latest",
-    "cmdk": "^0.2.0",
-    "react-easy-sort": "^1.6.0",
-    "tailwind-merge": "latest"
-  }
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/emblor",
+    "type": "git",
+    "url": "https://github.com/docimin/emblor"
+  },
+  "scripts": {
+    "build": "run-p build:*",
+    "build:tsup": "tsup --dts --minify",
+    "clean": "rimraf dist",
+    "dev": "tsup --watch --dts",
+    "format": "prettier --write .",
+    "prepare": "pnpm turbo build --filter emblor",
+    "prettier-check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "release": "pnpm run build && changeset publish",
+    "typecheck": "tsc --noEmit"
+  },
+  "types": "./dist/index.d.ts",
+  "version": "1.5.0"
 }
